@@ -12,7 +12,6 @@ function init()
     _patchPath = CS.ABMgr.patchPath
     _protocal = CS.ABMgr.protocal
     _abPathURL = string.format("%s%s", _protocal, abPath)
-    print(" CS.ABMgr:", CS.ABMgr)
     print("_abPlatform:",_abPlatform)
     print("_abPath:",_abPath)
     print("_patchPath:",_patchPath)

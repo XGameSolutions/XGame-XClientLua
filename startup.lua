@@ -3,7 +3,7 @@ function initIncludePath()
     local path = ""
     if platform == UE.RuntimePlatform.WindowsEditor or platform == UE.RuntimePlatform.OSXEditor then
         local dataPath = UE.Application.dataPath
-        path = path .. dataPath .. "/../../../XPublicLua/?.lua"
+        path = path .. dataPath .. "/../../../XCommon/?.lua"
     end
     package.path = package.path .. ";" .. path
 end
@@ -26,7 +26,7 @@ function checkPatch()
     require "launch/LaunchView"
     require "CSharpCallLua"
     require "patch/Patcher"
-    CS.GameStart.Instance:Startup()
+    CS.App.Instance:Startup()
     LaunchView.init()
     Patcher.check(patchEnd)
 end
